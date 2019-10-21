@@ -83,5 +83,28 @@ if (windowWidth < 1024) {
   };
 }
 
+// menu item click handler
+const paperLink = $('#paper_link');
+const subjectLink = $('#subject_link');
+const subject = $('#subject');
+const paper = $('#paper');
+
+const handlePaperClick = () => {
+  paper.classList.toggle('paper_active');
+  if (subject.classList.contains('subject_active')) {
+    subject.classList.remove('subject_active');
+  };
+};
+
+const handleSubjectClick = () => {
+  subject.classList.toggle('subject_active');
+  if (paper.classList.contains('paper_active')) {
+    paper.classList.remove('paper_active');
+  };
+};
+
+paperLink.addEventListener('click', handlePaperClick);
+subjectLink.addEventListener('click', handleSubjectClick);
+
 // animation on scroll
 AOS.init();
