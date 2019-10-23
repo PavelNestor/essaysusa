@@ -1,0 +1,95 @@
+.main
+  display: flex
+  background: linear-gradient( rgba(60, 25, 77, 0.7) 100%, rgba(60, 25, 77, 0.7) 100%), url('/img/main/bg.jpg') no-repeat center/cover
+  min-height: 100vh
+  justify-content: center
+  align-items: center
+
+  &__content
+    width: 100%
+
+  &__title
+    margin-right: 0
+    position: relative
+
+    &:after
+      position: absolute
+      content: ''
+      background: url('/img/logo.svg') no-repeat center/65%
+      bottom: 3.5rem
+      right: -3.2rem
+      height: 6rem
+      width: 9rem
+
+    @media #{$media-xs-up}
+      &:after
+        background: url('/img/logo.svg') no-repeat center
+        bottom: 1rem
+        // right: -2rem
+  
+
+    @media #{$media-sm-up}
+      margin-right: 4rem
+
+      &:after
+        right: -10rem
+
+    &-accent
+      -webkit-text-fill-color: transparent
+      -webkit-text-stroke-width: 1px
+      -webkit-text-stroke-color: $color_white
+
+    &-wrap
+      text-align: left
+
+      @media #{$media-sm-up}
+        text-align: right
+
+  &__subtitle
+    text-align: center
+
+  &__col
+    &:nth-child(1)
+      padding: 0
+
+      @media #{$media-sm-up}
+        padding: 0 $padding
+
+      @media #{$media-lg-up}
+        padding: 0 calc(#{ $padding * 2 })
+
+    &:nth-child(2)
+      align-items: flex-start
+      border: 1px solid $color_light
+      display: flex
+      justify-content: space-between
+      position: relative
+      width: 100%
+      flex-direction: column
+      padding: $padding
+
+      @media #{$media-sm-up}
+        align-items: center
+        flex-direction: row
+        padding: 0 calc(#{ $padding / 2 })
+
+      @media #{$media-md-up}
+        padding: 0 calc(#{ $padding * 1.5 }) 0 calc(50% - 16rem)
+
+  &__footer
+    &-img
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        bottom: 0
+        height: 22rem
+        left: 10rem
+        position: absolute
+        width: auto
+
+    &-container
+      padding: 2rem 2rem 2rem 0
+
+      @media #{$media-md-up}
+        padding: 2rem 0

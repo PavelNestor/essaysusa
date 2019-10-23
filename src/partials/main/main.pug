@@ -1,0 +1,29 @@
+include ../mixins/search
+section.main
+  .container.main__content
+    .main__col
+      .main__title-wrap
+        h1
+          .main__title-accent Biggest Database of
+          .main__title Essay Samples
+
+      .main__form
+        +searchForm('Search')
+
+      h4.main__subtitle Find Best Ideas for Your Essay
+
+    .main__col
+      img.main__footer-img(src='/img/main/doc.png', alt='essay')
+
+      .main__footer-container
+        h5 NEED WRITING HELP?
+
+        p.text_bold.text_white Order professional writing and get a polished paper!
+
+        ul.list
+          li.list__item Private communication
+          li.list__item Complete confidentiality
+          li.list__item Money Back Guarantee
+
+      button.button Grab the best paper
+
