@@ -1,1 +1,67 @@
 .navbar
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  height: 6rem
+  background: transparent
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 1rem
+
+  @media #{$media-md-up}
+    padding: 0 6rem
+
+  &__logo
+    display: none
+
+    @media #{$media-md-up}
+      display: block
+
+  &__login
+    display: block
+
+    @media #{$media-md-up}
+      display: none
+
+  &__burger
+    display: block
+
+    @media #{$media-md-up}
+      display: none
+
+  &__search
+    display: none
+
+    @media #{$media-md-up}
+      display: block
+
+  &__account
+    display: none
+
+    @media #{$media-md-up}
+      color: $color_white
+      font-size: 1.2rem
+      line-height: 1.1em
+      display: block
+
+  &-menu
+    &__wrap
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+
+    &__item
+      display: inline
+      margin-left: 3rem
+
+      &_root
+        background: url('/img/icons/down_arrow.svg') no-repeat right 0.5rem
+        padding-right: 1.5rem
+
+    &__link
+      color: $color_white
+      font-size: 1.2rem
+      line-height: 1.1em
