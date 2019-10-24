@@ -93,9 +93,12 @@ h1
 h2
 h3
 h4
-  font-size: 3rem
+  font-size: 2rem
   line-height: 1.2em
   color: $color_light
+
+  @media #{$media-md-up}
+    font-size: 3rem
 
 h5
   font-size: 2rem
@@ -254,20 +257,10 @@ input[type='number']
       margin-left: 0.5rem
       margin-bottom: 1.1rem
 
-// search form
-.search
-  &__form
-    display: flex
-    width: 100%
-
-  &__input
-    height: 4.8rem
-    width: 100%
-
 .button
   background-color: $color_accent
   border: none
-  color: #000
+  color: #333
   cursor: pointer
   display: inline-block
   font-size: 1.2rem
@@ -286,3 +279,42 @@ input[type='number']
 
   &:active, &:focus
     outline: none
+
+// search form
+.search
+  &__form
+    display: flex
+    width: 100%
+
+    &_nav
+      border-bottom: 1px solid $color_white
+      position: relative
+      width: 24rem
+
+  &__input
+    height: 4.8rem
+    width: 100%
+
+    &_nav
+      background: transparent
+
+  &__button
+    &_nav
+      padding: .6rem 1.2rem .6rem .6rem
+      background: transparent
+      font-size: 1.6rem
+      border: none
+      cursor: pointer
+      width: 4rem
+      margin-left: -1px
+      height: 4.9rem
+      position: absolute
+      right: 0
+
+      &.focus, &:focus, &:hover, &:active
+        text-decoration: none
+        background: transparent
+
+      &-img
+        height: 1.5rem
+        width: 1.6rem
