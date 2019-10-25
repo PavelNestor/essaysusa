@@ -318,3 +318,70 @@ input[type='number']
       &-img
         height: 1.5rem
         width: 1.6rem
+.title
+  color: $color_primary
+  display: inline
+
+  &__wrap
+  &_accent
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: $color_primary
+
+.how-block
+  // clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
+  transition: .4s
+  border: 2px solid $color_accent
+  padding: 7rem 4rem 4rem
+  position: relative
+  width: fit-content
+  flex-basis: calc(25% - 2rem)
+
+  &:hover
+    // border: .6rem solid $color_accent
+    // clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    margin-top: 5rem
+
+  &__text
+    font-size: 2rem
+    line-height: 1em
+
+  &__index
+    position: absolute
+    font-weight: bold
+    font-size: 8rem
+    line-height: 8rem
+    color: $color_primary
+    background: $color_light
+    top: -4rem
+
+.how-block-arrow
+  position: relative
+  background: $color_white
+  border: 2px solid $color_accent
+
+  &:after, &:before
+    left: 100%
+    top: 50%
+    border: solid transparent
+    content: ''
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+
+  &:after
+    border-color: rgba(136, 183, 213, 0)
+    border-left-color: $color_accent
+    border-width: 88px
+    margin-top: -88px
+
+  &:before
+    border-color: rgba(194, 225, 245, 0)
+    border-left-color: $color_accent
+    border-width: 94px
+    margin-top: -94px
