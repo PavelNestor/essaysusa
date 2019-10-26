@@ -1,0 +1,58 @@
+.faq
+  padding: 10rem $padding
+
+  &__content
+    display: flex
+  
+  &__col
+    flex-basis: 100%
+
+    @media #{$media-sm-plus-up}
+      flex-basis: 50%
+
+    &:nth-child(2)
+      display: none
+
+      @media #{$media-sm-plus-up}
+        display: block
+
+.tab
+  &__link
+    background-color: inherit
+    border: none
+    cursor: pointer
+    display: block
+    font-size: 2rem
+    font-weight: normal
+    line-height: 1.3em
+    outline: none
+    padding: 1.5rem 0
+    text-align: left
+    // transition: 4.s
+    width: 100%
+    position: relative
+    padding-right: 3rem
+
+    @media #{$media-sm-plus-up}
+      padding-right: 0
+
+    &-image
+      position: absolute
+      width: 2rem
+      height: 2rem
+      right: 0
+      top: calc(50% - 1.5rem)
+      transform: rotate(-90deg)
+      transition: .4s
+
+    &_active
+      font-weight: bold
+
+      .tab__link-image
+        transform: rotate(0)
+
+  &__content
+    display: none
+
+    &_active
+      display: block
