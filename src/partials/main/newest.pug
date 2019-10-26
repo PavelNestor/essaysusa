@@ -1,5 +1,6 @@
 include ../mixins/title
 include ../mixins/newestCard
+include ../mixins/more
 
 -
   var cards1 = [
@@ -96,3 +97,6 @@ section.newest
     .newest__col
       each card in cards3
         +newestCard(card)
+
+  .newest__more
+    +more()

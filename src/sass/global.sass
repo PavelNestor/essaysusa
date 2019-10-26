@@ -322,11 +322,17 @@ input[type='number']
   color: $color_primary
   display: inline
 
+  &_white
+    color: $color_white
+
   &__wrap
   &_accent
     -webkit-text-fill-color: transparent
     -webkit-text-stroke-width: 1px
     -webkit-text-stroke-color: $color_primary
+
+    &-white
+      -webkit-text-stroke-color: $color_white
 
 .how-block
   transition: .4s
@@ -479,3 +485,24 @@ input[type='number']
     display: flex
     align-items: center
     justify-content: space-between
+
+.more
+  position: relative
+
+  &:before
+    content: ''
+    width: 5rem
+    height: 1px
+    background: $color_accent
+    position: absolute
+    top: 50%
+    left: -6rem
+
+  &:after
+    content: ''
+    width: 5rem
+    height: 1px
+    background: $color_accent
+    position: absolute
+    top: 50%
+    right: -6rem
