@@ -1,0 +1,46 @@
+.need
+  display: flex
+  padding: 10rem $padding 0
+
+  &__content
+    display: flex
+    flex-direction: column-reverse
+    width: 100%
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+
+  &__col
+    &:nth-child(1)
+      flex-basis: 60%
+      padding: 0 calc(#{ $padding } / 2) 8rem 0
+      padding: 5rem 0
+
+      @media #{$media-sm-plus-up}
+        padding: 0
+
+    &:nth-child(2)
+      min-height: 34rem
+      flex-basis: 40%
+      position: relative
+      padding: 0 0 0 calc(#{ $padding } / 2)
+
+  &__footer
+    display: block
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+      display: flex
+      justify-content: space-between
+
+  &__img
+    position: absolute
+    height: 47rem
+    bottom: 0
+    left: -24%
+
+    @media #{$media-sm-plus-up}
+      left: 0
+
+  &__btn
+    margin-top: 3rem
