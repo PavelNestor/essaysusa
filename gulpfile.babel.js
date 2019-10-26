@@ -45,7 +45,7 @@ const paths = {
     fonts: "dist/fonts/"
   },
   src: {
-    view: ["src/*.pug"],
+    view: "src/*.pug",
     js: "src/js/*.js",
     style: "src/sass/build.sass",
     img: "src/img/**/*.*",
@@ -100,7 +100,8 @@ export const view = () => src(paths.src.view)
 
 // Images
 export const images = () => src(paths.src.img)
-  .pipe(dest(paths.dest.img));
+  .pipe(dest(paths.dest.img))
+  .pipe(reload({ stream: true }));
 
 export const watchFiles = () => {
   watch(paths.watch.view, series(view));

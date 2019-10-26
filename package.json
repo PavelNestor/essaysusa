@@ -2,9 +2,9 @@
   "name": "web-start",
   "version": "1.0.0",
   "description": "Web start - pug, sass, js, gulp, babel template",
-  "main": "gulpfile.babel.js",
+  "private": true,
   "scripts": {
-    "start": "gulp dev",
+    "start": "gulp dev --mode development",
     "build": "gulp dev --mode production"
   },
   "author": {
