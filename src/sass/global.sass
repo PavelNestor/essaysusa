@@ -429,3 +429,53 @@ input[type='number']
     border-left-color: $color_accent
     border-width: 94px
     margin-top: -94px
+    
+.card
+  border: 1px solid $color_light
+  padding: 2rem
+  margin-bottom: 1.5rem
+
+  &__top
+    padding-bottom: 1rem
+    position: relative
+
+    &:after
+      content: ''
+      width: 4rem
+      height: 1px
+      background: $color_accent
+      position: absolute
+      bottom: 0
+
+  &__title
+    font-weight: bold
+    font-size: 2rem
+    line-height: 1.2em
+    color: $color_primary
+
+  &__footer
+    padding-top: 1rem
+
+  &__bold
+    font-weight: bold
+
+  &__dots
+    width: 100%
+    display: flex
+    justify-content: flex-end
+
+  &__text
+    font-size: 1.1rem
+    line-height: 1.5em
+
+.dots
+  width: 3px
+  height: 3px
+  border-radius: 50%
+  background: $color_accent
+
+  &__wrap
+    width: 15px
+    display: flex
+    align-items: center
+    justify-content: space-between
