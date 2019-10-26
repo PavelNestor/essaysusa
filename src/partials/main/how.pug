@@ -1,0 +1,34 @@
+include ../mixins/title
+include ../mixins/howBlock
+
+-
+  var blocks = [
+    {
+      index: 1,
+      text: 'ENTER YOUR TOPIC'
+    },
+    {
+      index: 2,
+      text: 'CLICK ‘GET IT NOW’ BUTTON'
+    },
+    {
+      index: 3,
+      text: 'CHOOSE SAMPLES YOU NEED'
+    },
+    {
+      index: 4,
+      text: 'EXPLOIT THE TEXT'
+    },
+  ]
+
+section.how
+  +title('How', 'it works')
+
+  p Each step made as simple as possible for you!
+
+  .how-block__wrap
+    each block in blocks
+      +howBlock(block)
+
+  .how__button
+    button.button FIND A SAMPLE

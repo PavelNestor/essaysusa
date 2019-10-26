@@ -318,3 +318,114 @@ input[type='number']
       &-img
         height: 1.5rem
         width: 1.6rem
+.title
+  color: $color_primary
+  display: inline
+
+  &__wrap
+  &_accent
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke-width: 1px
+    -webkit-text-stroke-color: $color_primary
+
+.how-block
+  transition: .4s
+  padding: 2.7rem 2.7rem 2.7rem 4.7rem
+  position: relative
+  width: fit-content
+  background: $color_light
+  width: 100%
+  height: 100%
+
+  @media #{$media-sm-plus-up}
+    padding: 7rem 4rem 4rem
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
+
+  &__block
+    position: relative
+    flex-basis: 100%
+    margin-bottom: 1.8rem
+    margin-left: calc( #{ $padding } / 2)
+
+    @media #{$media-sm-plus-up}
+      flex-basis: calc(25% - 2rem)
+      margin-bottom: 0
+
+    &:hover
+      .how-block
+        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+        box-shadow: inset 0px 0px 0 3px $color_accent
+
+        &__container
+          clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+
+  &__container
+    background: $color_accent
+    padding: 1px
+    transition: .4s
+    height: 100%
+
+    @media #{$media-sm-plus-up}
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    margin-top: 5rem
+    flex-wrap: wrap
+
+    @media #{$media-sm-plus-up}
+      flex-wrap: initial
+
+  &__text
+    font-size: 1.6rem
+    line-height: 1em
+
+    @media #{$media-sm-plus-up}
+      font-size: 2rem
+
+  &__index
+    position: absolute
+    font-weight: bold
+    color: $color_primary
+    background: $color_light
+    z-index: 1
+    font-size: 6rem
+    left: -18px
+    top: calc(50% - 3rem)
+    line-height: 5rem
+    padding-bottom: 1rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 8rem
+      left: 4rem
+      top: -4rem
+      line-height: 8rem
+      padding-bottom: 0
+
+.how-block-arrow
+  position: relative
+  background: $color_white
+  border: 2px solid $color_accent
+
+  &:after, &:before
+    left: 100%
+    top: 50%
+    border: solid transparent
+    content: ''
+    height: 0
+    width: 0
+    position: absolute
+    pointer-events: none
+
+  &:after
+    border-color: rgba(136, 183, 213, 0)
+    border-left-color: $color_accent
+    border-width: 88px
+    margin-top: -88px
+
+  &:before
+    border-color: rgba(194, 225, 245, 0)
+    border-left-color: $color_accent
+    border-width: 94px
+    margin-top: -94px
