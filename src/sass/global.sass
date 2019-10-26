@@ -329,35 +329,79 @@ input[type='number']
     -webkit-text-stroke-color: $color_primary
 
 .how-block
-  // clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
   transition: .4s
-  border: 2px solid $color_accent
-  padding: 7rem 4rem 4rem
+  padding: 2.7rem 2.7rem 2.7rem 4.7rem
   position: relative
   width: fit-content
-  flex-basis: calc(25% - 2rem)
+  background: $color_light
+  width: 100%
+  height: 100%
 
-  &:hover
-    // border: .6rem solid $color_accent
-    // clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+  @media #{$media-sm-plus-up}
+    padding: 7rem 4rem 4rem
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
+
+  &__block
+    position: relative
+    flex-basis: 100%
+    margin-bottom: 1.8rem
+    margin-left: calc( #{ $padding } / 2)
+
+    @media #{$media-sm-plus-up}
+      flex-basis: calc(25% - 2rem)
+      margin-bottom: 0
+
+    &:hover
+      .how-block
+        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+        box-shadow: inset 0px 0px 0 3px $color_accent
+
+        &__container
+          clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+
+  &__container
+    background: $color_accent
+    padding: 1px
+    transition: .4s
+    height: 100%
+
+    @media #{$media-sm-plus-up}
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
 
   &__wrap
     display: flex
     justify-content: space-between
     margin-top: 5rem
+    flex-wrap: wrap
+
+    @media #{$media-sm-plus-up}
+      flex-wrap: initial
 
   &__text
-    font-size: 2rem
+    font-size: 1.6rem
     line-height: 1em
+
+    @media #{$media-sm-plus-up}
+      font-size: 2rem
 
   &__index
     position: absolute
     font-weight: bold
-    font-size: 8rem
-    line-height: 8rem
     color: $color_primary
     background: $color_light
-    top: -4rem
+    z-index: 1
+    font-size: 6rem
+    left: -18px
+    top: calc(50% - 3rem)
+    line-height: 5rem
+    padding-bottom: 1rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 8rem
+      left: 4rem
+      top: -4rem
+      line-height: 8rem
+      padding-bottom: 0
 
 .how-block-arrow
   position: relative
