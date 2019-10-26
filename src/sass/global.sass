@@ -37,7 +37,7 @@ a
 
 p
   font-size: 1.4rem
-  line-height: 1.5rem
+  line-height: 1.5em
   color: $color_primary
 
 .text
@@ -96,7 +96,6 @@ h3
 h4
   font-size: 2rem
   line-height: 1.2em
-  color: $color_light
 
   @media #{$media-md-up}
     font-size: 3rem
@@ -279,6 +278,14 @@ input[type='number']
 
   &:active, &:focus
     outline: none
+
+  &_accent
+    background-color: $color_violet
+    color: $color_white
+
+    &.focus, &:focus, &:hover, &:active
+      background-color: darken($color_violet, 10)
+
 
 // search form
 .search

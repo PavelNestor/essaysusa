@@ -1,0 +1,19 @@
+.wait
+  display: flex
+  padding: 10rem $padding
+  background: $color_accent
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+  &__col
+    flex-basis: 50%
+
+    &:nth-child(1)
+      padding-bottom: 5rem
+
+  &__btn
+    margin-top: 2rem
