@@ -1,0 +1,98 @@
+include ../mixins/title
+include ../mixins/newestCard
+
+-
+  var cards1 = [
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    }
+  ];
+
+  var cards2 = [
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    }
+  ];
+
+  var cards3 = [
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+  ];
+
+section.newest
+  +title('Newest', 'Essays')
+
+  .newest__content
+    .newest__col
+      each card in cards1
+        +newestCard(card)
+    .newest__col
+      each card in cards2
+        +newestCard(card)
+    .newest__col
+      each card in cards3
+        +newestCard(card)

@@ -1,0 +1,12 @@
+include dots
+
+mixin newestCard(option)
+  .card
+    .card__top
+      .card__title= option.title
+    .card__footer
+      .card__text.card__bold= option.subtitle
+      .card__text= option.pages
+      .card__text= option.date
+    .card__dots
+      +dots()
