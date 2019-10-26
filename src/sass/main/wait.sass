@@ -3,6 +3,9 @@
   padding: 10rem $padding
   background: $color_accent
 
+  &__block
+    overflow: hidden
+
   &__content
     display: flex
     flex-direction: column
@@ -15,5 +18,10 @@
     &:nth-child(1)
       padding-bottom: 5rem
 
+  &__title
+    font-size: 5.6rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 9rem
   &__btn
     margin-top: 2rem

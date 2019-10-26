@@ -1,15 +1,17 @@
 include ../mixins/title
 
-section.wait
-  .wait__content
-    .wait__col
-      +titleFill('Don’t')
-      +titleFill('Wait')
-      +titleStrock('Anymore!')
+section.wait__block
+  .wait
+    .wait__content
+      .wait__col
+        +titleFill('Don’t')(class='wait__title')
+        +titleFill('Wait')(class='wait__title')
+        +titleStrock('Anymore!')(class='wait__title')
 
-    .wait__col
-      h4 Download Full Essays Now and For Free!
+      .wait__col
+        h4 Download Full Essays Now and For Free!
 
-      p Your journey in search of an essay helper free has come to an end. We have been assisting students in need of writing assistance for almost a decade. Our service is fast, affordable, and reliable. You will not be asked to sign up before you can place an order. Just by filling out an order form, you will have begun your pleasant journey towards a truly custom paper. Place your order now to get a free full essay.
+        p Your journey in search of an essay helper free has come to an end. We have been assisting students in need of writing assistance for almost a decade. Our service is fast, affordable, and reliable. You will not be asked to sign up before you can place an order. Just by filling out an order form, you will have begun your pleasant journey towards a truly custom paper. Place your order now to get a free full essay.
 
-      button.button.button_accent.wait__btn FIND A SAMPLE
+        button.button.button_accent.wait__btn FIND A SAMPLE
+  include need

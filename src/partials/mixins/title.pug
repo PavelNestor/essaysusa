@@ -12,9 +12,9 @@ mixin titleWhite(one, two)
 
 mixin titleStrock(text)
   h1.m0
-    .title.title_accent.title_stroke= text
+    .title.title_accent.title_stroke(class!=attributes.class)= text
 
 mixin titleFill(text)
   h1.m0
-    .title.title_fill= text
+    .title.title_fill(class!=attributes.class)= text
 
