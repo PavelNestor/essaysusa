@@ -305,6 +305,7 @@ input[type='number']
 
     &_nav
       background: transparent
+      height: 3.8rem
 
   &__button
     &_nav
@@ -315,7 +316,7 @@ input[type='number']
       cursor: pointer
       width: 4rem
       margin-left: -1px
-      height: 4.9rem
+      height: 3.9rem
       position: absolute
       right: 0
 
@@ -326,6 +327,7 @@ input[type='number']
       &-img
         height: 1.5rem
         width: 1.6rem
+
 .title
   color: $color_primary
   display: inline
@@ -514,6 +516,14 @@ input[type='number']
     position: absolute
     top: 50%
     right: -6rem
+
+  &_white
+    color: $color_white
+
+    &:before
+      background: $color_white
+    &:after
+      background: $color_white
 
 
 // helpers

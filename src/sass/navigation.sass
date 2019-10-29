@@ -1,5 +1,5 @@
 .navbar
-  position: fixed
+  position: absolute
   top: 0
   left: 0
   right: 0
@@ -9,15 +9,57 @@
   align-items: center
   justify-content: space-between
   padding: 0 1rem
+  transition: .5s
+  // transform: translateY(-120%)
 
   @media #{$media-md-up}
     padding: 0 6rem
+
+  &_active
+    z-index: 10
+    position: fixed
+    transform: translateY(0)
+    background: $color_white
+
+    .navbar
+      &__burger
+        img
+          filter: invert(.7)
+
+      &__login
+        img
+          filter: invert(.7)
+
+      &__logo
+        display: none
+
+        &_color
+          display: none
+
+          @media #{$media-md-up}
+            display: block
+
+      &__account
+        color: $color_primary
+
+      &-menu
+        &__link
+          color: $color_primary
+
+    .search__form_nav
+      border-bottom: 1px solid $color_primary
+
+    .search__input_nav
+      color: $color_primary
 
   &__logo
     display: none
 
     @media #{$media-md-up}
       display: block
+
+    &_color
+      display: none
 
   &__login
     display: block

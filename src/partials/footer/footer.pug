@@ -1,13 +1,86 @@
+include ../mixins/more
+
 footer.footer
-  p.text_bold.text_white.footer__header Happy to help you
+  .footer__col
+    p.text_bold.text_white.footer__header Happy to help you
 
-  .footer__24.text_white 24/7
+    .footer__24.text_white 24/7
 
-  p.text_bold.text_white Feel free to get in touch with us via email:
+    p.text_bold.text_white Feel free to get in touch with us via email:
 
-  a.footer__mail(href="mailto:support@essaysusa.com") support@essaysusa.com
+    a.footer__mail(href="mailto:support@essaysusa.com") support@essaysusa.com
 
-  a.footer__link(href="#") About Us
-  a.footer__link(href="#") How it works
-  a.footer__link(href="#") Choose your paper
-  a.footer__link(href="#") Choose your Subject
+  .footer__col
+    .footer__logo
+      img(src="/img/logo_full.svg", alt="Essay USA")
+
+    .footer__menu
+      a.footer__link(href="#") About Us
+      a.footer__link(href="#") How it works
+      a.footer__link(href="#") Choose your paper
+      a.footer__link(href="#") Choose your Subject
+
+    .footer__submenu
+      .footer__submenu-col
+        ul
+          li 
+            a.footer__submenu-link(href="#") All Papers
+          li 
+            a.footer__submenu-link(href="#") Blog
+          li 
+            a.footer__submenu-link(href="#") Admission / Application Essay
+          li 
+            a.footer__submenu-link(href="#") Annotated Bibliography
+          li 
+            a.footer__submenu-link(href="#") Literature review
+          li 
+            a.footer__submenu-link(href="#") Math Problem
+          li 
+            a.footer__submenu-link(href="#") Movie Review
+          li 
+            a.footer__submenu-link(href="#") Outline
+          li 
+            a.footer__submenu-link(href="#") Personal Statement
+
+      .footer__submenu-col
+        ul
+          li 
+            a.footer__submenu-link(href="#") Article 
+          li 
+            a.footer__submenu-link(href="#") Assignment
+          li 
+            a.footer__submenu-link(href="#") Book Report / Review
+          li 
+            a.footer__submenu-link(href="#") Case Study
+          li 
+            a.footer__submenu-link(href="#") PowerPoint Presentation
+          li 
+            a.footer__submenu-link(href="#") Research Paper
+          li 
+            a.footer__submenu-link(href="#") Research Proposal
+          li 
+            a.footer__submenu-link(href="#") Scholarship Essay
+          li 
+            a.footer__submenu-link(href="#") Speech or Presentation
+
+      .footer__submenu-col
+        ul
+          li 
+            a.footer__submenu-link(href="#") Coursework
+          li 
+            a.footer__submenu-link(href="#") Dissertation
+          li 
+            a.footer__submenu-link(href="#") Essay
+          li 
+            a.footer__submenu-link(href="#") Lab Report
+          li 
+            a.footer__submenu-link(href="#") Statistics Project
+          li 
+            a.footer__submenu-link(href="#") Term Paper
+          li 
+            a.footer__submenu-link(href="#") Thesis
+          li 
+            a.footer__submenu-link(href="#") Thesis Proposal
+    
+    .footer__more
+      +lessWhite()
