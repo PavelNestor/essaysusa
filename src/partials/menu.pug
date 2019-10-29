@@ -1,0 +1,45 @@
+include ./mixins/more
+
+#menu.menu
+  .menu__header
+    a#menu-close.navbar__burger(href="#")
+      img(src='/img/icons/burger.svg', alt='Open menu')
+
+    a.navbar__login(href="#")
+      img(src='/img/icons/login.svg', alt='Login')
+
+  .menu__content
+    .menu__logo
+      img(src="/img/logo_full.svg", alt="Essay USA")
+
+    .menu__links
+      a.menu__link(href="#") About Us
+      a.menu__link(href="#") How it works
+      a.menu__link(href="#") Choose your paper
+      a.menu__link(href="#") Choose your Subject
+
+    .submenu
+      .submenu__col
+        a.submenu__link(href="#") All Papers
+        a.submenu__link(href="#") Blog
+        a.submenu__link(href="#") Admission / Application Essay
+        a.submenu__link(href="#") Annotated Bibliography
+
+      .submenu__col
+        a.submenu__link(href="#") Article
+        a.submenu__link(href="#") Assignment
+        a.submenu__link(href="#") Book Report / Review
+        a.submenu__link(href="#") Case Study
+
+    .menu__more
+      +moreWhite()
+
+  .menu__footer
+    p.text_bold.text_white.footer__header Happy to help you
+
+    .footer__24.text_white 24/7
+
+    p.text_bold.text_white Feel free to get in touch with us via email:
+
+    a.footer__mail(href="mailto:support@essaysusa.com") support@essaysusa.com
+
