@@ -1,5 +1,5 @@
 "use strict";
-import AOS from "AOS";
+import AOS from "aos";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);

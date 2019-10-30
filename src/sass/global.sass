@@ -498,6 +498,8 @@ input[type='number']
 
 .more
   position: relative
+  color: $color_accent
+  transition: .4s
 
   &:before
     content: ''
@@ -507,6 +509,7 @@ input[type='number']
     position: absolute
     top: 50%
     left: -6rem
+    transition: .4s
 
   &:after
     content: ''
@@ -516,6 +519,19 @@ input[type='number']
     position: absolute
     top: 50%
     right: -6rem
+    transition: .4s
+  
+  &:hover
+    // padding: 0 5rem
+
+    &:before
+      transform: scaleX(2)
+      left: -8rem
+
+    &:after
+      transform: scaleX(2)
+      right: -8rem
+
 
   &_white
     color: $color_white
