@@ -14,7 +14,11 @@
       display: none
 
       @media #{$media-sm-plus-up}
+        border-left: 6px solid $color_accent
+        border-top-left-radius: 2rem
+        border-bottom-left-radius: 2rem
         display: block
+        padding-left: $padding
 
 .tab
   &__link
@@ -35,27 +39,60 @@
 
     @media #{$media-sm-plus-up}
       padding-right: 0
-
+    
     &-image
-      position: absolute
-      width: 2rem
+      display: block
       height: 2rem
+      position: absolute
       right: 0
       top: calc(50% - 1.5rem)
       transform: rotate(-90deg)
       transition: .4s
+      width: 2rem
 
       @media #{$media-sm-plus-up}
         display: none
+        opacity: 0
+
+      &_desk
+        display: none
+        opacity: 0
+        transition: .4s
+
+        @media #{$media-sm-plus-up}
+          display: none
+          opacity: 0
 
     &_active
       font-weight: bold
 
-      .tab__link-image
-        transform: rotate(0)
+      .tab__link
+        &-image
+          transform: rotate(0)
+          opacity: 1
+
+          @media #{$media-sm-plus-up}
+            display: none
+
+          &_desk
+            display: none
+
+            @media #{$media-sm-plus-up}
+              display: block
+              position: absolute
+              right: -2.3rem
+              width: 4rem
+              top: 0
+              opacity: 1
 
   &__content
     display: none
+
+    &_mobile
+      display: none
+      
+      &_active
+        display: block
 
     &_active
       display: block
