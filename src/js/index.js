@@ -53,10 +53,6 @@ if (windowWidth < 1024) {
     };
 
     const tabToggler = index => {
-      // tabcontents.forEach(tabContent => tabContent.style.display = 'none');
-      // tablinks.forEach(tabLink => tabLink.classList.remove('tab__link_active'));
-
-      // tabcontents[index].style.display = 'block';
       tabcontents[index].classList.toggle('tab__content_mobile_active');
       tablinks[index].classList.toggle('tab__link_active');
     };

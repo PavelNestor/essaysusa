@@ -1,0 +1,131 @@
+include ../mixins/title
+include ../mixins/newestCard
+include ../mixins/more
+
+
+-
+  var cards1 = [
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    }
+  ];
+
+  var newestCard = [
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    }
+  ];
+
+section.page.page_one
+  .page__crumbs
+    p Types of examples > Admission/Application Essay
+  .page__content
+    .page__col
+      h1.page__title Admission/Application Essay Example and Samples
+
+      each card in cards1
+        +pageCard(card)
+
+    .page__col
+      .page__lokking
+        +titleFill('Also')(class="page__subtitle")
+        +titleStrock('Looking for')(class="page__subtitle")
+
+      .page__newest
+        +titleReverse('Newest', 'Essays')(class="page__subtitle")
+
+        each card in newestCard
+          +pageCard(card)
+
+        .page__more
+          +more()
