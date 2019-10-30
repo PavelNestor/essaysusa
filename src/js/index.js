@@ -1,11 +1,12 @@
 "use strict";
-import AOS from "AOS";
+import AOS from "aos";
 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
+const windowWidth = window.innerWidth;
 
 // handle open menu
-(function() {
+(function () {
   var menuOpen = $('#menu-open');
   var menuClose = $('#menu-close');
   var menuContent = $('#menu');
@@ -39,23 +40,50 @@ window.addEventListener('scroll', handleScrollBehavior);
 
 
 // handle tabs
-const select = document.querySelector.bind(document);
-const selectAll = document.querySelectorAll.bind(document);
 
-const tabContents = selectAll('div.tab__content');
-const tabLinks = selectAll('button.tab__link');
-const tabLinksDefault = select('button.tab__link[data-defaultLink]');
+if (windowWidth < 1024) {
 
-const handleLinkClick = index => {
-  tabContents.forEach(tabContent => tabContent.classList.remove('tab__content_active'));
-  tabLinks.forEach(tabLink => tabLink.classList.remove('tab__link_active'));
+  // tab open content mobile
+  (function () {
+    const tabcontents = $$('.tab__content_mobile');
+    const tablinks = $$('.tab__link');
 
-  tabContents[index].classList.add('tab__content_active');
-  tabLinks[index].classList.add('tab__link_active');
-};
+    if (tabcontents.length < 1 || tablinks.length < 1) {
+      return;
+    };
 
-tabLinks.forEach((tabLink, index) => tabLink.addEventListener('click', () => handleLinkClick(index)));
-tabLinksDefault.click();
+    const tabToggler = index => {
+      // tabcontents.forEach(tabContent => tabContent.style.display = 'none');
+      // tablinks.forEach(tabLink => tabLink.classList.remove('tab__link_active'));
+
+      // tabcontents[index].style.display = 'block';
+      tabcontents[index].classList.toggle('tab__content_mobile_active');
+      tablinks[index].classList.toggle('tab__link_active');
+    };
+
+    tablinks.forEach((tabLink, index) => tabLink.addEventListener('click', () => tabToggler(index)));
+  })();
+
+} else {
+  const select = document.querySelector.bind(document);
+  const selectAll = document.querySelectorAll.bind(document);
+
+  const tabContents = selectAll('div.tab__content');
+  const tabLinks = selectAll('button.tab__link');
+  const tabLinksDefault = select('button.tab__link[data-defaultLink]');
+
+  const handleLinkClick = index => {
+    tabContents.forEach(tabContent => tabContent.classList.remove('tab__content_active'));
+    tabLinks.forEach(tabLink => tabLink.classList.remove('tab__link_active'));
+
+    tabContents[index].classList.add('tab__content_active');
+    tabLinks[index].classList.add('tab__link_active');
+  };
+
+  tabLinks.forEach((tabLink, index) => tabLink.addEventListener('click', () => handleLinkClick(index)));
+  tabLinksDefault.click();
+
+}
 
 // animation on scroll
 AOS.init();
