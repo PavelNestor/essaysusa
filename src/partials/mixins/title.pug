@@ -1,14 +1,20 @@
 mixin title(one, two)
   .title__wrap
     h1
-      .title.title_accent= one
-      .title= two
+      .title.title_accent(class!=attributes.class)= one
+      .title(class!=attributes.class)= two
+
+mixin titleReverse(one, two)
+  .title__wrap
+    h1
+      .title(class!=attributes.class)= one
+      .title.title_accent(class!=attributes.class)= two
 
 mixin titleWhite(one, two)
   .title__wrap
     h1
-      .title.title_accent.title_accent-white= one
-      .title.title_white= two
+      .title.title_accent.title_accent-white(class!=attributes.class)= one
+      .title.title_white(class!=attributes.class)= two
 
 mixin titleStrock(text)
   h1.m0

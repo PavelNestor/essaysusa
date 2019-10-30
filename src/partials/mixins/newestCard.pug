@@ -10,3 +10,15 @@ mixin newestCard(option)
       .card__text= option.date
     .card__dots
       +dots()
+
+mixin pageCard(option)
+  .card(data-aos="fade-up")
+    .card__top
+      .card__title= option.title
+    .card__footer.card__footer_page
+      .card__description
+        .card__text.card__bold= option.subtitle
+        .card__text= option.pages
+        .card__text= option.date
+      .card__btn
+        a.button.button_outline(href="#") Read text

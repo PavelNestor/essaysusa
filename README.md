@@ -1,4 +1,4 @@
-# PAG-SASS TAMPLATE - руководство по запуску сайта
+# ESSAYS USA - руководство по запуску сайта
 
 ### start project for pag-sass.
 

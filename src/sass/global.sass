@@ -287,6 +287,14 @@ input[type='number']
     &.focus, &:focus, &:hover, &:active
       background-color: darken($color_violet, 10)
 
+  &_outline
+    background-color: transparent
+    color: $color_outline
+    border: 1px solid $color_accent
+
+    &.focus, &:focus, &:hover, &:active
+      background-color: $color_accent
+
 
 // search form
 .search
@@ -468,9 +476,14 @@ input[type='number']
     font-size: 2rem
     line-height: 1.2em
     color: $color_primary
+    transition: .4s
 
   &__footer
     padding-top: 1rem
+
+    &_page
+      display: flex
+      justify-content: space-between
 
   &__bold
     font-weight: bold
@@ -480,9 +493,15 @@ input[type='number']
     display: flex
     justify-content: flex-end
 
+  &__description
+  &__btn
   &__text
     font-size: 1.1rem
     line-height: 1.5em
+
+  &:hover
+    .card__title
+      color: $color_accent
 
 .dots
   width: 3px

@@ -1,0 +1,31 @@
+.page
+  padding: 10rem $padding
+
+  &__title
+    color: $color_violet
+    font-size: 5rem
+
+  &__subtitle
+    font-size: 4rem
+
+  &__newest
+    padding-left: 3rem
+
+  &__lokking
+    padding-left: 3rem
+    border-left: 1px solid #E0E0E0
+
+  &__more
+    padding-top: 5rem
+    text-align: center
+
+  &__content
+    display: flex
+
+  &__col
+    &:nth-child(1)
+      flex-basis: 66%
+      padding-right: calc(#{ $padding } * 0.75)
+
+    &:nth-child(2)
+      flex-basis: 34%
