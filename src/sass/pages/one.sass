@@ -3,13 +3,18 @@
 
   &__title
     color: $color_violet
-    font-size: 5rem
+    font-size: 3rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 5rem
 
   &__subtitle
-    font-size: 4rem
+    font-size: 3rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 4rem
 
   &__newest
-    padding-left: 3rem
 
   &__lokking
     padding-left: 3rem
@@ -21,11 +26,87 @@
 
   &__content
     display: flex
+    flex-direction: column
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+
+  &__free
+    background: linear-gradient(rgba(60, 25, 77, 0.7) 100%, rgba(60, 25, 77, 0.7) 100%), url("/img/main/free-bg.jpg") no-repeat center/cover
+    padding: 4rem 3rem
+    margin: 5rem calc( -#{ $padding })
+
+    @media #{$media-sm-plus-up}
+      margin: 5rem 0
+
+    &-title
+      font-size: 4rem
+
+      &_big
+        font-size: 6rem
 
   &__col
     &:nth-child(1)
       flex-basis: 66%
-      padding-right: calc(#{ $padding } * 0.75)
+      padding-right: 0
+
+      @media #{$media-sm-plus-up}
+        padding-right: calc(#{ $padding } * 0.75)
 
     &:nth-child(2)
       flex-basis: 34%
+
+  &__inner
+    display: flex
+
+    &-col
+      flex-basis: 100%
+
+      @media #{$media-sm-plus-up}
+        flex-basis: 50%
+
+      &:nth-child(2)
+        display: none
+
+        @media #{$media-sm-plus-up}
+          display: block
+
+  &__perfect
+    text-align: center
+    border: 2px solid $color_accent
+    padding: 2rem
+    margin-bottom: 5rem
+
+  &-essay
+
+    &__description
+      border-bottom: 1px solid $color_accent
+      padding-bottom: 2rem
+
+    &__subtitle
+      font-size: 3rem
+      line-height: 1em
+      letter-spacing: -0.02em
+      color: $color_primary
+      margin-bottom: 2rem
+
+      @media #{$media-sm-plus-up}
+        font-size: 5rem
+
+    &__title
+      font-size: 2rem
+
+      @media #{$media-sm-plus-up}
+        font-size: 3rem
+
+.looking
+  &__list
+  &__item
+    list-style: none
+    border-bottom: 1px solid #E0E0E0
+    padding: 1rem 0
+
+  &__link
+    font-size: 1.4rem
+    line-height: 1.3em
+    color: $color_primary

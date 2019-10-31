@@ -10,6 +10,13 @@ mixin titleReverse(one, two)
       .title(class!=attributes.class)= one
       .title.title_accent(class!=attributes.class)= two
 
+mixin pageTitleReverse(one, two)
+  .title__wrap
+    h1(class!=attributes.class)
+      .title= one
+      br
+      .title.title_accent= two
+
 mixin titleWhite(one, two)
   .title__wrap
     h1

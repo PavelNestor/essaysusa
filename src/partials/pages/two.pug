@@ -113,8 +113,14 @@ section.page.page_one
     .page__col
       h1.page__title Admission/ Application Essay Example and Samples
 
-      each card in cards1
-        +pageCard(card)
+      .page__inner
+        .page__inner-col
+          each card in cards1
+            +pageCard(card)
+
+        .page__inner-col
+          each card in cards1
+            +pageCard(card)
 
     .page__col
       .page__lokking
