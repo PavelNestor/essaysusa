@@ -1,0 +1,124 @@
+include ../mixins/title
+include ../mixins/newestCard
+include ../mixins/more
+
+
+-
+  var newestCard = [
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    }
+  ];
+
+section.page.page_one
+  .page__crumbs
+    p Types of examples > Admission/Application Essay
+
+  .page__content
+    .page__col
+      h1.page__title.page-essay__title Admission/ Application Essay Example
+
+      h2.page-essay__subtitle Why Have I Chosen to Be an Early Childhood Teacher
+
+      .page-essay__description
+        .card__footer
+          .card__text.card__bold Law Article Undergraduate
+          .card__text Pages: 1 (250 words)
+          .card__text May 10, 2018
+
+      .page-essay__content
+        p The paper  "Why Have I Chosen to Be an Early Childhood Teacher?" is a dramatic example of an admission essay on education. I choose to be an early childhood teacher because this, to me, is one of the most pleasing jobs to do. I enjoy my work. My clients are little children to whom, I am like a parent. The lessons I teach them today form the basis of their beliefs, views, and opinions they will hold throughout their lives. They have very tender minds that have a wonderful capacity to absorb, comprehend and interpret new concepts, words and areas of knowledge. They tend to participate in the lecture with all their energy, and we mutually develop a team that is heading towards knowledge and success.
+
+        p.text_bold My qualities and responsibilities:
+        p A teacher plays a very important role in the social grooming and growth of little children towards professionalism. The roles of an early childhood teacher include but are not limited to:
+
+        p.text_bold Nurturer:
+        p A teacher educates the children and shapes their personality by making them behave in an organized and civilized manner in the class. I believe that I have good nurturing capabilities especially because I tend to maintain a friendly atmosphere in the class which serves as a catalyst in the process of nurturing the children. “Good teachers do more than teach; they inspire.” (McCutchen 50).
+
+        p.text_bold Facilitator:
+        p I believe that an early childhood teacher facilitates the process of learning by designing the lecture in such a manner that ensures good participation and development of interest on the part of the children. I regularly plan my daily lectures with a view to facilitating my clients’ comprehension and understanding of the subject.
+
+        p.text_bold Communicator:
+        p Children learn to communicate and convey their opinion in an educated manner by observing the mannerism of their teacher. I tend to communicate with the little fellows in a friendly and decent manner and hope that they sense the decency in my tone and adopt the same in their communication for the whole life.
+
+        p.text_bold Coordinator:
+        p It is my responsibility to coordinate the activities, tasks, and various classroom works of my children so that they learn to work with harmony, peace, and friendship. The friendly attitude I maintain with the children helps me coordinate their works and activities effectively.
+
+        p.text_bold Manager:
+        p Management is one of the most fundamental duties of a teacher. Without good management, children lose their focus and indulge in unproductive works, arguments and occasional fights. The way I plan my lecture helps me manage my class well and keep them busy in productive knowledgeable activities.
+
+        p.text_bold Goals for guiding children’s behavior:
+        p To guide the behavior of children, there are the following goals:
+
+        p.text_bold Development of brotherhood:
+        p It is important to guide the behavior of children so that they learn to work in teams with harmony, peace, and cooperation. Children happen to socialize with one another as per the guidance of the teacher. Therefore, the guidance should be such so as to ensure that they indulge in healthy arguments, and facilitate one another in their works.
+
+        p.text_bold Mannerism:
+        p The way an individual socializes in his/her professional life has a strong relationship with the concepts an early childhood teacher inculcates in him/her. The future of a nation is in the hands of its youth. Children’s behavior should be guided in order to ensure that they will form responsible adults in the future and work in the best interest of the country.
+
+        p.text_bold Classroom activities and environment:
+        p Indoor activities and environment:
+          | Indoor activities constitute reading, writing, speaking and listening. The children perform any of these four fundamental activities as per the demand of the lecture and the subject. The indoor environment of the class makes the children civilized and behaved. The indoor class environment is safer as compared to the outdoor environment because of the constant provision and management in the former as compared to the latter.
+          | Outdoor activities and environment:
+          | Outdoor activities at school include group works, sports, practice, and exercise. The outdoor school environment provides the children with more room to socialize with one another, and hence learn to argument responsibly and intelligently, which strengthens their mutual relationship.
+
+        p.text_bold Curriculum for little children:
+        p The curriculum of children should equally emphasize the attainment of religious and sociological education along with conventional scientific education. Moreover, there should be enough room for such activities as debates, and stage performances so as to ensure the development of confidence in the children. Games should also be made part of the curriculum because they not only ensure the mental nurturing of children but also improve their physical health that is imperative for their professional growth and health.
+
+        p.text_bold Ways to ensure continuous professional development:
+
+        ul.list
+          li.list__item An early childhood teacher can ensure continuous professional development of the children by,
+          li.list__item Incorporating more competitive activities in the lecture. 
+          li.list__item Healthy competition always leads to the professional development of the students.
+          li.list__item Ensuring sociological education of the children, so that they value ethics throughout their lives, and
+          li.list__item Encouraging children to participate in extra co-curricular activities.
+
+    .page__col
+      .page__perfect
+        .title__wrap
+          h1.page__free-title
+            .title.title_accent HAVEN'T FOUND
+            .title YOUR PERFECT ESSAY?
+
+        h5 Get Essay on your topic
+
+        p Assign an expert to write your essay
+        p
+          | from 
+          span.text_bold $12.30 
+          span.text_trought $13.60
+
+        a(href="#").button Order writing from scratch
+
+        p Delivered on-time or your money back
+
+      .page__newest
+        +titleReverse('Newest', 'Essays')(class="page__subtitle")
+
+        each card in newestCard
+          +pageCard(card)
+
+      .page__newest
+        +titleReverse('Related', 'Essays')(class="page__subtitle")
+
+        each card in newestCard
+          +pageCard(card)
+
+        .page__more
+          +more()

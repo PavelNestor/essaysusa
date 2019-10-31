@@ -76,9 +76,11 @@ if (windowWidth < 1024) {
     tabLinks[index].classList.add('tab__link_active');
   };
 
-  tabLinks.forEach((tabLink, index) => tabLink.addEventListener('click', () => handleLinkClick(index)));
-  tabLinksDefault.click();
 
+  if (tabLinks.length > 0) {
+    tabLinks.forEach((tabLink, index) => tabLink.addEventListener('click', () => handleLinkClick(index)));
+    tabLinksDefault.click();
+  };
 }
 
 // animation on scroll
