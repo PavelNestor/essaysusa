@@ -114,5 +114,25 @@ subjectLinkMobile.addEventListener('click', handleSubjectClick);
 paperClose.addEventListener('click', handlePaperClick);
 subjectClose.addEventListener('click', handleSubjectClick);
 
+// footer more - less
+const footerMore = $('.footer__more');
+const footerLess = $('.footer__less');
+const footerSubmenu = $('.footer__submenu');
+
+const handleFooderMore = () => {
+  footerSubmenu.classList.add('footer__submenu_active');
+  footerMore.style.display = 'none';
+  footerLess.style.display = 'block';
+}
+
+const handleFooderLess = () => {
+  footerSubmenu.classList.remove('footer__submenu_active');
+  footerLess.style.display = 'none';
+  footerMore.style.display = 'block';
+}
+
+footerMore.addEventListener('click', handleFooderMore);
+footerLess.addEventListener('click', handleFooderLess);
+
 // animation on scroll
 AOS.init();
