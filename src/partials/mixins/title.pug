@@ -1,14 +1,14 @@
 mixin title(one, two)
   .title__wrap
-    h1
-      .title.title_accent(class!=attributes.class)= one
-      .title(class!=attributes.class)= two
+    h1(class!=attributes.class)
+      .title.title_accent= one
+      .title= two
 
 mixin titleReverse(one, two)
   .title__wrap
-    h1
-      .title(class!=attributes.class)= one
-      .title.title_accent(class!=attributes.class)= two
+    h1(class!=attributes.class)
+      .title= one
+      .title.title_accent= two
 
 mixin pageTitleReverse(one, two)
   .title__wrap
@@ -19,7 +19,7 @@ mixin pageTitleReverse(one, two)
 
 mixin titleWhite(one, two)
   .title__wrap
-    h1
+    h1(class!=attributes.class)
       .title.title_accent.title_accent-white(class!=attributes.class)= one
       .title.title_white(class!=attributes.class)= two
 

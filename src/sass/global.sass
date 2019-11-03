@@ -250,15 +250,18 @@ input[type='number']
 
   &__item
     background: url('/img/icons/list-img.svg') no-repeat left 1px
-    font-size: 1.4rem
+    font-size: 1.6rem
     line-height: 1.1em
-    margin-bottom: 1.2rem
+    margin-bottom: .7rem
     margin-left: -0.1rem
-    padding-left: 3.2rem
+    padding-left: 2.9rem
 
     @media #{$media-sm-plus-up}
       margin-left: 0.5rem
       margin-bottom: 1.1rem
+      font-size: 1.4rem
+      margin-bottom: 1.2rem
+      padding-left: 3.2rem
 
 .button
   background-color: $color_accent
@@ -310,6 +313,10 @@ input[type='number']
       position: relative
       width: 24rem
 
+  &__button
+    padding: 1.7rem 2.1rem
+    font-size: 1.1rem
+
   &__input
     height: 4.8rem
     width: 100%
@@ -357,12 +364,15 @@ input[type='number']
 
 .how-block
   transition: .4s
-  padding: 2.7rem 2.7rem 2.7rem 4.7rem
   position: relative
   width: fit-content
   background: $color_light
   width: 100%
   height: 100%
+  min-height: 6.8rem
+  display: flex
+  padding: 0 2.7rem 0 4.7rem
+  align-items: center
 
   @media #{$media-sm-plus-up}
     padding: 7rem 4rem 4rem

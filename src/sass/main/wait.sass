@@ -1,7 +1,10 @@
 .wait
   display: flex
-  padding: 10rem $padding
+  padding: 5rem $padding
   background: $color_accent
+
+  @media #{$media-sm-plus-up}
+    padding: 10rem $padding
 
   &__block
     overflow: hidden
