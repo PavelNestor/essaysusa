@@ -65,6 +65,16 @@
 
     &_active
       font-weight: bold
+      position: relative
+
+      &::before
+        background: $color_accent
+        width: 1rem
+        position: absolute
+        top: 1.5rem
+        bottom: 0
+        left: -#{$padding}
+        content: ''
 
       .tab__link
         &-image
@@ -93,6 +103,16 @@
       
       &_active
         display: block
+        position: relative
+
+        &::before
+          background: $color_accent
+          width: 1rem
+          position: absolute
+          top: -1.5rem
+          bottom: 0
+          left: -#{$padding}
+          content: ''
 
     &_active
       display: block

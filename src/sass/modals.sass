@@ -28,6 +28,10 @@
     visibility: visible
     -webkit-overflow-scrolling: touch
 
+    .paper
+      display: flex
+      z-index: 1
+
     .modal-content
       transform: translateY(0) translateZ(2px)
       transition: opacity .3s ease-out, transform .5s, visibility .4s, outline .4s
@@ -46,6 +50,8 @@
   width: 2.4rem
   transition: top .1s
   z-index: 1020
+  position: absolute
+  cursor: pointer
 
   &:after
     display: none

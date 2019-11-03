@@ -13,13 +13,18 @@
     display: block
     margin-bottom: 6rem
     text-align: center
+    height: 3.6rem
 
     @media #{$media-sm-up}
       display: none
 
   &__content
     width: 100%
-    padding-top: 10rem
+    padding-top: 0
+    padding-bottom: 7rem
+
+    @media #{$media-sm-up}
+      padding-top: 10rem
 
   &__title
     margin-right: 0
@@ -29,8 +34,8 @@
       position: absolute
       content: ''
       background: url('/img/logo.svg') no-repeat center/65%
-      bottom: 3.5rem
-      right: -3.2rem
+      bottom: 4rem
+      right: -2.9rem
       height: 6rem
       width: 9rem
 
@@ -58,9 +63,13 @@
       @media #{$media-sm-up}
         text-align: right
 
+      h1
+        margin-bottom: 2.9rem
+
   &__subtitle
     text-align: center
     color: $color_light
+    margin-top: 3rem
 
   &__col
     &:nth-of-type(1)
@@ -101,6 +110,20 @@
         left: 10rem
         position: absolute
         width: auto
+
+    &-button
+      margin-top: 0.5rem
+      font-size: 1.02rem
+      padding: 1.1rem 1.6rem
+
+    &-text
+      margin-top: 1rem
+      font-size: 1.6rem
+      line-height: 1.3em
+      margin-bottom: 1.4rem
+
+    &-title
+      margin-bottom: 0
 
     &-container
       padding: 0

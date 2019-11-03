@@ -83,5 +83,36 @@ if (windowWidth < 1024) {
   };
 }
 
+// menu item click handler
+const paperLink = $('#paper_link');
+const subjectLink = $('#subject_link');
+const paperLinkMobile = $('#paper_link_mobile');
+const subjectLinkMobile = $('#subject_link_mobile');
+const paper = $('#paper');
+const subject = $('#subject');
+const paperClose = $('#paper-close');
+const subjectClose = $('#subject-close');
+
+const handlePaperClick = () => {
+  paper.classList.toggle('paper_active');
+  if (subject.classList.contains('subject_active')) {
+    subject.classList.remove('subject_active');
+  };
+};
+
+const handleSubjectClick = () => {
+  subject.classList.toggle('subject_active');
+  if (paper.classList.contains('paper_active')) {
+    paper.classList.remove('paper_active');
+  };
+};
+
+paperLink.addEventListener('click', handlePaperClick);
+subjectLink.addEventListener('click', handleSubjectClick);
+paperLinkMobile.addEventListener('click', handlePaperClick);
+subjectLinkMobile.addEventListener('click', handleSubjectClick);
+paperClose.addEventListener('click', handlePaperClick);
+subjectClose.addEventListener('click', handleSubjectClick);
+
 // animation on scroll
 AOS.init();
