@@ -3,7 +3,7 @@ import loadPlugins from 'gulp-load-plugins';
 import webpack from 'webpack-stream';
 import browserSync from 'browser-sync';
 
-const isBuild = false;
+const isBuild = true;
 const plugins = loadPlugins();
 const {
   autoprefixer,

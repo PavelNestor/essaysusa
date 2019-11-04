@@ -320,10 +320,13 @@ input[type='number']
   &__input
     height: 4.8rem
     width: 100%
+    padding: 0 1rem
+    outline: none
 
     &_nav
       background: transparent
       height: 3.8rem
+      color: $color_white
 
   &__button
     &_nav
@@ -555,15 +558,13 @@ input[type='number']
     transition: .4s
   
   &:hover
-    // padding: 0 5rem
-
     &:before
-      transform: scaleX(2)
-      left: -8rem
+      width: 8rem
+      left: -9rem
 
-    &:after
-      transform: scaleX(2)
-      right: -8rem
+    &::after
+      width: 8rem
+      right: -9rem
 
 
   &_white

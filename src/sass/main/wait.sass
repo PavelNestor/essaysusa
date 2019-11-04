@@ -20,11 +20,17 @@
 
     &:nth-child(1)
       padding-bottom: 5rem
+      padding-right: 0
+
+      @media #{$media-sm-plus-up}
+        padding-right: 2rem
 
   &__title
     font-size: 5.6rem
+    line-height: 0.8em
 
     @media #{$media-sm-plus-up}
       font-size: 9rem
+
   &__btn
     margin-top: 2rem

@@ -24,10 +24,10 @@ mixin titleWhite(one, two)
       .title.title_white(class!=attributes.class)= two
 
 mixin titleStrock(text)
-  h1.m0
+  h1.m0(class!=attributes.class)
     .title.title_accent.title_stroke(class!=attributes.class)= text
 
 mixin titleFill(text)
-  h1.m0
-    .title.title_fill(class!=attributes.class)= text
+  h1.m0(class!=attributes.class)
+    .title.title_fill= text
 
