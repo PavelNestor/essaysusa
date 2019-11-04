@@ -1,5 +1,22 @@
 .page
-  padding: 10rem $padding
+  padding: 6rem $padding
+
+  @media #{$media-sm-plus-up}
+    padding: 10rem $padding
+
+  &__crumbs
+    position: relative
+
+    &::before
+      content: ''
+      background: url('/img/icons/back.svg') no-repeat
+      left: calc((-#{ $padding } / 2) - 1rem)
+      width: 2rem
+      height: 3rem
+      position: absolute
+
+      @media #{$media-sm-plus-up}
+        left: calc(-#{ $padding } / 2)
 
   &__title
     color: $color_violet

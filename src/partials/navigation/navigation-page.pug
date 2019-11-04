@@ -1,0 +1,45 @@
+include ../mixins/search
+
+nav#navbar.navbar
+  .navbar__row
+    a#menu-open.navbar__burger(href="#")
+      img(src='/img/icons/p-close.svg', alt='Open menu')
+
+    a.navbar__login(href="#")
+      img(src='/img/icons/login_color.svg', alt='Login')
+
+    a.navbar__logo(href="index.html")
+      img(src="/img/logo_color.svg", alt="Essay USA")
+
+    a.navbar__logo_color(href="index.html")
+      img(src="/img/logo_color.svg", alt="Essay USA")
+
+    .navbar__search
+      +searchFormNavbar()
+
+    .navbar-menu__wrap
+      ul.navbar-menu
+        li.navbar-menu__item
+          a.navbar-menu__link.navbar-menu__link_page(href="#") About Us
+        li.navbar-menu__item
+          a.navbar-menu__link.navbar-menu__link_page(href="#") How it works
+        li#paper_link.navbar-menu__item.navbar-menu__item_root
+          a.navbar-menu__link.navbar-menu__link_page Choose your paper
+        li#subject_link.navbar-menu__item.navbar-menu__item_root
+          a.navbar-menu__link.navbar-menu__link_page Choose your Subject
+
+    .navbar__account.navbar-menu__link_page My Account
+
+  .navbar__row
+    include paper
+
+  #paper-dialog__content
+    include paper
+
+  .navbar__row
+    include subject
+
+  #subject-dialog__content
+    include subject
+
+  #subject.navbar__row
