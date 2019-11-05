@@ -2,7 +2,7 @@
   padding: 6rem $padding
 
   @media #{$media-sm-plus-up}
-    padding: 10rem $padding
+    padding: 8rem $padding
 
   &__crumbs
     position: relative
@@ -21,12 +21,15 @@
   &__title
     color: $color_violet
     font-size: 3rem
+    letter-spacing: -0.03em
+    text-transform: none
 
     @media #{$media-sm-plus-up}
       font-size: 5rem
 
   &__subtitle
     font-size: 3rem
+    text-align: center
 
     @media #{$media-sm-plus-up}
       font-size: 4rem
@@ -38,8 +41,11 @@
     border-left: 1px solid #E0E0E0
 
   &__more
-    padding-top: 5rem
+    padding-top: 4.5rem
     text-align: center
+
+    &_side
+      padding-bottom: 4.5rem
 
   &__content
     display: flex
@@ -65,12 +71,10 @@
   &__col
     &:nth-child(1)
       flex-basis: 66%
-      padding-right: 0
-      padding-bottom: 5rem
+      padding: 1rem 5.13vw 5rem 0
 
       @media #{$media-sm-plus-up}
-        padding-right: calc(#{ $padding } * 0.75)
-      padding-bottom: 0
+        padding-right: 1rem calc(#{ $padding } * 0.75) 0 0
 
     &:nth-child(2)
       flex-basis: 34%
@@ -95,6 +99,10 @@
     border: 2px solid $color_accent
     padding: 2rem
     margin-bottom: 5rem
+
+    &-subtitle
+      margin-top: -1.5rem
+      margin-bottom: 1rem
 
   &-essay
 

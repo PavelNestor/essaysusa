@@ -6,12 +6,6 @@ include ../mixins/more
 -
   var newestCard = [
     {
-      title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
-      subtitle: 'Law Article Undergraduate',
-      pages: 'Pages: 1 (250 words)',
-      date: 'May 10, 2018'
-    },
-    {
       title: 'A News Story from the Mass Media',
       subtitle: 'Law Article Undergraduate',
       pages: 'Pages: 1 (250 words)',
@@ -19,6 +13,12 @@ include ../mixins/more
     },
     {
       title: 'Milford Woman Dies at Hands of Husband Despite Tougher Domestic Violence Laws',
+      subtitle: 'Law Article Undergraduate',
+      pages: 'Pages: 1 (250 words)',
+      date: 'May 10, 2018'
+    },
+    {
+      title: 'A News Story from the Mass Media',
       subtitle: 'Law Article Undergraduate',
       pages: 'Pages: 1 (250 words)',
       date: 'May 10, 2018'
@@ -100,7 +100,7 @@ section.page.page_one
             .title.title_accent HAVEN'T FOUND
             .title YOUR PERFECT ESSAY?
 
-        h5 Get Essay on your topic
+        h5.page__perfect-subtitle Get Essay on your topic
 
         p Assign an expert to write your essay
         p
@@ -117,6 +117,9 @@ section.page.page_one
 
         each card in newestCard
           +pageCard(card)
+
+      .page__more.page__more_side
+        +more()
 
       .page__newest
         +titleReverse('Related', 'Essays')(class="page__subtitle")

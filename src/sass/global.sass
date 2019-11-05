@@ -369,7 +369,7 @@ input[type='number']
   transition: .4s
   position: relative
   width: fit-content
-  background: $color_light
+  background: transparent
   width: 100%
   height: 100%
   min-height: 6.8rem
@@ -378,8 +378,7 @@ input[type='number']
   align-items: center
 
   @media #{$media-sm-plus-up}
-    padding: 7rem 4rem 4rem
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
+    padding: 5.6rem 0 3rem 4rem
 
   &__block
     position: relative
@@ -388,25 +387,53 @@ input[type='number']
     margin-left: calc( #{ $padding } / 2)
 
     @media #{$media-sm-plus-up}
+      &::after
+        content: ''
+        right: -3rem
+        position: absolute
+        background: url('/img/icons/Union.png') right center no-repeat/cover
+        top: 0
+        bottom: 0
+        width: 5rem
+
+    @media #{$media-sm-plus-up}
       flex-basis: calc(25% - 2rem)
       margin-bottom: 0
 
     &:hover
-      .how-block
-        clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
-        box-shadow: inset 0px 0px 0 3px $color_accent
+      .how-block__container
+        border: 4px solid $color_accent
+        padding: 0
 
-        &__container
-          clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%)
+        @media #{$media-sm-plus-up}
+          border-right: 0
+
+      @media #{$media-sm-plus-up}
+        &:last-of-type
+          .how-block__container
+            border-right: 4px solid $color_accent
+            border: 4px solid $color_accent
+
+    &:first-of-type
+      @media #{$media-sm-plus-up}
+        margin-left: 0
+
+    &:last-of-type
+      &::after
+        background: none
+
+      .how-block__container
+        border: 3px solid $color_accent
 
   &__container
-    background: $color_accent
-    padding: 1px
+    background: transparent
     transition: .4s
     height: 100%
+    padding: 2px
+    border: 2px solid $color_accent
 
     @media #{$media-sm-plus-up}
-      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)
+      border-right: 0
 
   &__wrap
     display: flex
@@ -439,37 +466,10 @@ input[type='number']
     @media #{$media-sm-plus-up}
       font-size: 8rem
       left: 4rem
-      top: -4rem
+      top: -2.5rem
       line-height: 8rem
       padding-bottom: 0
 
-.how-block-arrow
-  position: relative
-  background: $color_white
-  border: 2px solid $color_accent
-
-  &:after, &:before
-    left: 100%
-    top: 50%
-    border: solid transparent
-    content: ''
-    height: 0
-    width: 0
-    position: absolute
-    pointer-events: none
-
-  &:after
-    border-color: rgba(136, 183, 213, 0)
-    border-left-color: $color_accent
-    border-width: 88px
-    margin-top: -88px
-
-  &:before
-    border-color: rgba(194, 225, 245, 0)
-    border-left-color: $color_accent
-    border-width: 94px
-    margin-top: -94px
-    
 .card
   border: 1px solid $color_light
   padding: 2rem

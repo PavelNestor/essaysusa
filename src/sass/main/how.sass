@@ -1,6 +1,9 @@
 .how
   padding: 5rem $padding
-  background: url("/img/main/how-bg.svg") no-repeat center/100% $color_light
+  background: url("/img/main/how-bg.svg") no-repeat center/cover $color_light
+
+  @media #{$media-sm-plus-up}
+    background: url("/img/main/how-bg.svg") center right no-repeat $color_light
 
   &__title
     margin-bottom: 2rem
@@ -9,10 +12,6 @@
     text-align: center
     margin-top: 1.2rem
 
-    button
-      font-size: 1rem
-      padding: 1.7rem
-
     @media #{$media-sm-plus-up}
-      margin-top: 5.4rem
+      margin-top: 3.4rem
       font-size: 1.2rem

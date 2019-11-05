@@ -15,6 +15,7 @@
 
     &:nth-child(1)
       padding: 1.5rem 1rem
+      height: 6rem
 
       @media #{$media-md-up}
         padding: 0 6rem
@@ -28,10 +29,14 @@
   &_active
     z-index: 10
     position: fixed
-    transform: translateY(0)
+    transform: translateY(-2%)
     background: $color_white
 
     .navbar
+      &__row
+        &:nth-child(1)
+          box-shadow: 0px 2px 2px 0px #0000000d
+
       &__burger
         img
           filter: invert(.7)
