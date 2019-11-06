@@ -31,6 +31,7 @@
     position: fixed
     transform: translateY(-2px)
     background: $color_white
+    box-shadow: 0px 2px 2px 0px #0000000d
 
     .burger-main
       display: none
@@ -50,15 +51,6 @@
     .navbar
       &__row
         &:nth-child(1)
-          box-shadow: 0px 2px 2px 0px #0000000d
-
-      // &__burger
-      //   img
-      //     filter: invert(.7)
-
-      // &__login
-      //   img
-      //     filter: invert(.7)
 
       &__logo
         display: none
@@ -156,3 +148,19 @@
 
 .logo_color
   display: none
+
+.paper-link_active
+  position: relative
+
+  a
+    color: $color_primary
+
+  &::before
+    position: absolute
+    content: ''
+    left: -1rem
+    right: -1rem
+    top: -2.2rem
+    bottom: -2.2rem
+    background: $color_light
+    z-index: -1

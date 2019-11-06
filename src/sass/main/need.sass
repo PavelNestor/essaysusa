@@ -42,6 +42,9 @@
       display: flex
       justify-content: space-between
 
+    @media #{$media-lg-up}
+      justify-content: flex-start
+
   &__img
     position: absolute
     height: 37rem
@@ -54,3 +57,7 @@
 
   &__btn
     margin-top: 3rem
+
+    @media #{$media-lg-up}
+      margin-left: 12vw
+

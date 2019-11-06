@@ -95,15 +95,19 @@ const subjectClose = $('#subject-close');
 
 const handlePaperClick = () => {
   paper.classList.toggle('paper_active');
+  paperLink.classList.toggle('paper-link_active');
   if (subject.classList.contains('subject_active')) {
     subject.classList.remove('subject_active');
+    subjectLink.classList.remove('paper-link_active');
   };
 };
 
 const handleSubjectClick = () => {
   subject.classList.toggle('subject_active');
+  subjectLink.classList.toggle('paper-link_active');
   if (paper.classList.contains('paper_active')) {
     paper.classList.remove('paper_active');
+    paperLink.classList.remove('paper-link_active');
   };
 };
 
