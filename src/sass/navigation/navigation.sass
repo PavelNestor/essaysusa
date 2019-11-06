@@ -29,21 +29,36 @@
   &_active
     z-index: 10
     position: fixed
-    transform: translateY(-2%)
+    transform: translateY(-2px)
     background: $color_white
+
+    .burger-main
+      display: none
+
+    .burger-active
+      display: block
+
+    .login-main
+      display: none
+
+    .login-active
+      display: block
+
+    .logo_color
+      display: block
 
     .navbar
       &__row
         &:nth-child(1)
           box-shadow: 0px 2px 2px 0px #0000000d
 
-      &__burger
-        img
-          filter: invert(.7)
+      // &__burger
+      //   img
+      //     filter: invert(.7)
 
-      &__login
-        img
-          filter: invert(.7)
+      // &__login
+      //   img
+      //     filter: invert(.7)
 
       &__logo
         display: none
@@ -130,3 +145,14 @@
 
       &_page
         color: $color_violet
+
+.burger-main
+.burger-active
+  display: none
+
+.login-main
+.login-active
+  display: none
+
+.logo_color
+  display: none

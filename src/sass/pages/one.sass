@@ -29,10 +29,10 @@
 
   &__subtitle
     font-size: 3rem
-    text-align: center
 
     @media #{$media-sm-plus-up}
       font-size: 4rem
+      padding-left: 2rem
 
   &__newest
 
@@ -58,6 +58,12 @@
     background: linear-gradient(rgba(60, 25, 77, 0.7) 100%, rgba(60, 25, 77, 0.7) 100%), url("/img/main/free-bg.jpg") no-repeat center/cover
     padding: 4rem 3rem
     margin: 5rem calc( -#{ $padding })
+
+    &-title
+      font-size: 4rem
+
+      &_big
+        display: block
 
     @media #{$media-sm-plus-up}
       margin: 5rem 0
@@ -87,6 +93,10 @@
 
       @media #{$media-sm-plus-up}
         flex-basis: 50%
+
+      &:nth-child(1)
+        @media #{$media-sm-plus-up}
+          padding-right: 1.5rem
 
       &:nth-child(2)
         display: none

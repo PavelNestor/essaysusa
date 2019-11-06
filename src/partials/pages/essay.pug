@@ -93,6 +93,23 @@ section.page.page_one
           li.list__item Ensuring sociological education of the children, so that they value ethics throughout their lives, and
           li.list__item Encouraging children to participate in extra co-curricular activities.
 
+      .page-essay__footer
+        .social__wrap
+          .social__item
+            .social__btn.social__btn_fb
+              img(src='/img/icons/fb.svg', alt='facebook')
+            .social__text 25
+
+          .social__item
+            .social__btn.social__btn_twitter
+              img(src='/img/icons/twitter.svg', alt='facebook')
+            .social__text 54
+
+          .social__item
+            .social__btn.social__btn_telegram
+              img(src='/img/icons/telegram.svg', alt='facebook')
+            .social__text 36
+
     .page__col
       .page__perfect
         .title__wrap
@@ -113,7 +130,7 @@ section.page.page_one
         p Delivered on-time or your money back
 
       .page__newest
-        +titleReverse('Newest', 'Essays')(class="page__subtitle")
+        +titleReverse('Newest ', 'Essays')(class="page__subtitle")
 
         each card in newestCard
           +pageCard(card)
@@ -122,7 +139,7 @@ section.page.page_one
         +more()
 
       .page__newest
-        +titleReverse('Related', 'Essays')(class="page__subtitle")
+        +titleReverse('Related ', 'Essays')(class="page__subtitle")
 
         each card in newestCard
           +pageCard(card)

@@ -3,10 +3,15 @@ include ../mixins/search
 nav#navbar.navbar
   .navbar__row
     a#menu-open.navbar__burger(href="#")
-      img(src='/img/icons/burger.svg', alt='Open menu')
+      img.burger-main(src='/img/icons/burger.svg', alt='Open menu')
+      img.burger-active(src='/img/icons/burger_c.svg', alt='Open menu')
+
+    a.logo_color(href="index.html")
+      img(src="/img/logo_color.svg", alt="Essay USA")
 
     a.navbar__login(href="#")
-      img(src='/img/icons/login.svg', alt='Login')
+      img.login-main(src='/img/icons/login.svg', alt='Login')
+      img.login-active(src='/img/icons/login_c.svg', alt='Login')
 
     a.navbar__logo(href="index.html")
       <svg width="205" height="33" viewBox="0 0 205 33" fill="none" xmlns="http://www.w3.org/2000/svg">
