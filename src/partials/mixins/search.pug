@@ -4,7 +4,7 @@ mixin searchForm(text)
     button.button.search__button(type='submit', src='/img/icons/search.svg')= text
 
 mixin searchFormNavbar()
-  form.search__form.search__form_nav(action='#')
+  form.search__form.search__form_nav(action='#', class!=attributes.class)
     input.search__input.search__input_nav(type='text', name='search')
     button.button.search__button_nav(type='submit', src='/img/icons/search.svg')
       img.search__button_nav-img(src='/img/icons/search.svg', alt="Search")

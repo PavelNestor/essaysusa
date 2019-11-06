@@ -15,11 +15,8 @@ nav#navbar.navbar
     a.navbar__logo(href="index.html")
       img(src="/img/logo_color.svg", alt="Essay USA")
 
-    a.navbar__logo_color(href="index.html")
-      img(src="/img/logo_color.svg", alt="Essay USA")
-
     .navbar__search
-      +searchFormNavbar()
+      +searchFormNavbar()(class="page-nav-form")
 
     .navbar-menu__wrap
       ul.navbar-menu
